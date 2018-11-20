@@ -22,5 +22,7 @@ app.use(session({ secret: "6170", resave: true, saveUninitialized: true }));
 app.use('/', indexRouter);
 app.use('/api/circles', circleRouter);
 
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => console.log(`Listening on ${PORT}`))
 
 module.exports = app;
